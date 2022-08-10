@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính đơn giản</title>
+  <style>
+    input {
+      border: white;
+    }
+    table {
+      border: 1px black solid;
+    }
+    td {
+      text-align: center;
+    }
+    button {
+      width: 30px;
+      height: 30px;
+    }
+  </style>
+</head>
+<body>
+<table>
+  <tr>
+    <td colspan="4"><p style="height: 0;"><label for="mhtrai"></label><input type="text" id="mhtrai"></p></td>
+  </tr>
+
+  <tr>
+    <td colspan="4"><p><label for="mhphai"></label><input type="text" id="mhphai" style="text-align: right"></p></td>
+  </tr>
+
+  <tr>
+    <td>
+      <button onclick="so(1)">1</button>
+    </td>
+    <td>
+      <button onclick="so(2)">2</button>
+    </td>
+    <td>
+      <button onclick="so(3)">3</button>
+    </td>
+    <td>
+      <button onclick="so('+')">+</button>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <button onclick="so(4)">4</button>
+    </td>
+    <td>
+      <button onclick="so(5)">5</button>
+    </td>
+    <td>
+      <button onclick="so(6)">6</button>
+    </td>
+    <td>
+      <button onclick="so('-')">-</button>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <button onclick="so(7)">7</button>
+    </td>
+    <td>
+      <button onclick="so(8)">8</button>
+    </td>
+    <td>
+      <button onclick="so(9)">9</button>
+    </td>
+    <td>
+      <button onclick="so('*')">*</button>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <button onclick="xoa()">C</button>
+    </td>
+    <td>
+      <button onclick="so(0)">0</button>
+    </td>
+    <td>
+      <button onclick="bang()">=</button>
+    </td>
+    <td>
+      <button onclick="so('/')">/</button>
+    </td>
+  </tr>
+</table>
+<script src="simplecalculator.js"></script>
+</body>
+</html>
