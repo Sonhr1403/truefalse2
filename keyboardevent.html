@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sự kiện bàn phím</title>
+</head>
+<body onload="docReady()">
+<img id="nobita" alt="nobitaa" src="https://upload.wikimedia.org/wikipedia/vi/2/2c/Nobita.png" style="position:absolute;left:0; top:0;" height="100" width="80"/>
+
+<script>
+    function upArrowPressed() {
+        let element = document.getElementById("nobita");
+        element.style.top = parseInt(element.style.top) - 20 + 'px';
+    }
+    function downArrowPressed() {
+        let element = document.getElementById("nobita");
+        element.style.top = parseInt(element.style.top) + 20 + 'px';
+    }
+    function leftArrowPressed() {
+        let element = document.getElementById("nobita");
+        element.style.left = parseInt(element.style.left) - 20 + 'px';
+    }
+    function rightArrowPressed() {
+        let element = document.getElementById("nobita");
+        element.style.left = parseInt(element.style.left) + 20 + 'px';
+    }
+
+    // function moveSelection(event) {
+    //         switch (event.keyCode) {
+    //             case 37:
+    //                 leftArrowPressed();
+    //                 break;
+    //             case 39:
+    //                 rightArrowPressed();
+    //                 break;
+    //             case 38:
+    //                 upArrowPressed();
+    //                 break;
+    //             case 40:
+    //                 downArrowPressed();
+    //                 break;
+    //     }
+    // }
+    function moveSelection(event) {
+        switch (event.keyCode) {
+            case 65: //Phím A
+                leftArrowPressed();
+                break;
+            case 68: //Phím D (Turn off Unikey)
+                rightArrowPressed();
+                break;
+            case 87: //Phím W (Turn off Unikey)
+                upArrowPressed();
+                break;
+            case 83: //Phím S
+                downArrowPressed();
+                break;
+        }
+    }
+
+    function docReady() {
+        window.addEventListener('keydown', moveSelection);
+    }
+</script>
+</body>
+</html>
